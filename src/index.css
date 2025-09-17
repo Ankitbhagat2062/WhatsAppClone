@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@plugin "daisyui";
+body{
+  height: 100vh;
+}
+/* input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  -webkit-text-fill-color: inherit !important;
+  color: blue !important;
+} */
+/* Autofill override */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px inherit inset !important;
+  -webkit-text-fill-color: black !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+  background-color: blue !important;
+  /* background-color: transparent !important; */
+}
+/* [data-chat-bg] { position: relative; } */
+[data-chat-bg] {
+  background-image: url("https://static.whatsapp.net/rsrc.php/v4/yl/r/gi_DckOUM5a.png");
+}
+
+@theme {
+  @keyframes bounceCustom {
+    0%, 100% { transform: translateY(0); }
+    25% { transform: translateY(-5px); }
+    50% { transform: translateY(5px); }
+    75% { transform: translateY(-3px); }
+  }
+
+  @keyframes pingCustom {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(1.8); opacity: 0; }
+  }  
+}
+.animate-bounce-custom {
+  animation: bounceCustom 0.8s infinite;
+}
+.animate-ping-custom {
+  animation: pingCustom 1.2s infinite;
+}
+
+
