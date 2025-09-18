@@ -13,7 +13,6 @@ import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
 import { toast } from 'react-toastify';
 import { FaWhatsapp, FaChevronDown, FaUser, FaArrowLeft, FaPlus } from "react-icons/fa";
-import Theme from '../Theme/Theme';
 //  Validationschema
 const loginvalidationSchema = yup.object().shape({
   phoneNumber: yup.string().nullable().notRequired().matches(/^\d+$/, 'Phone number must be digit').transform((value, originalValue) =>
@@ -243,7 +242,6 @@ const Login = () => {
   return (
     <div className={`min-h-screen min-w-screen flex items-center justify-center p-4 overflow-hidden 
     ${theme === 'dark' ? 'bg-gray-900' : 'bg-gradient-to-br from-green-400 to-blue-500'}`}>
-      <Theme />
       <motion.div initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
         className={`p-6 md:p-8 rounded-lg shadow-2xl w-full max-w-md relative z-10 ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-white'}`}>
         {/* Your form or content goes here */}

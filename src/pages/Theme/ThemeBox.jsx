@@ -1,7 +1,7 @@
 import React from 'react'
 import useThemeStore from '../../store/themeStore';
 import { MdDarkMode , MdOutlineDarkMode } from "react-icons/md";
-const Theme = ({ className }) => {
+const ThemeBox = ({ className }) => {
     const { theme, setTheme } = useThemeStore();
     useThemeStore.subscribe((state) => {
         console.log("Theme store changed:", state);
@@ -29,4 +29,4 @@ const Theme = ({ className }) => {
     )
 }
 
-export default Theme
+export default ThemeBox

@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@plugin "daisyui";
 body{
   height: 100vh;
 }
@@ -24,19 +23,6 @@ input:-webkit-autofill:active {
   background-image: url("https://static.whatsapp.net/rsrc.php/v4/yl/r/gi_DckOUM5a.png");
 }
 
-@theme {
-  @keyframes bounceCustom {
-    0%, 100% { transform: translateY(0); }
-    25% { transform: translateY(-5px); }
-    50% { transform: translateY(5px); }
-    75% { transform: translateY(-3px); }
-  }
-
-  @keyframes pingCustom {
-    0% { transform: scale(1); opacity: 0.8; }
-    100% { transform: scale(1.8); opacity: 0; }
-  }  
-}
 .animate-bounce-custom {
   animation: bounceCustom 0.8s infinite;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Phone, Mail, MessageCircle, Users, Shield, Zap } from 'lucide-react';
 import whatsappImage from '../utils/images/whatsapp_image.png';
-import Theme from './theme/theme';
+import ThemeBox from './Theme/ThemeBox';
 import useThemeStore from '../store/themeStore';
 
 const Home = () => {
@@ -30,7 +30,7 @@ const Home = () => {
 const {theme } = useThemeStore()
   return (
     <div className={`min-h-screen bg-gradient-to-br from-green-50 ${(theme === 'light') ?  'via-white to-green-100' : 'via-black to-green-600'}`}>
-      <Theme />
+      <ThemeBox />
       {/* Navigation */}
       <nav className={`${(theme === 'light') ? 'bg-white text-gray-800' : 'bg-gray-800 text-gray-200'} shadow-lg`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

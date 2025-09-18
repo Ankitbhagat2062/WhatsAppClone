@@ -1,7 +1,7 @@
 import React , {useRef} from 'react';
 import useLayoutStore from '../store/layoutStore';
 import { useLocation } from 'react-router-dom';
-import Theme from '../pages/theme/theme';
+import ThemeBox from '../pages/Theme/ThemeBox.jsx';
 import useThemeStore from '../store/themeStore';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageSquare, Users, Phone, Mail } from 'lucide-react';
@@ -71,7 +71,7 @@ const Layout = ({ children, isThemeDialogOpen, toggleThemeDialog, isStatusPrevie
 
   return (
     <>
-      <Theme className={`z-1 ${(theme === 'light') ? 'bg-[#111b21] text-white' : 'bg-gray-100 text-black'}`} />
+      <ThemeBox className={`z-1 ${(theme === 'light') ? 'bg-[#111b21] text-white' : 'bg-gray-100 text-black'}`} />
       <div className={`min-h-screen ${(theme === 'dark') ? 'bg-[#111b21] text-white' : 'bg-gray-100 text-black'}
     flex relative`}>
         {!isMobile && <Sidebar />}
