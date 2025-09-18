@@ -2,9 +2,12 @@ import jwt from 'jsonwebtoken';
 import Response from '../utills/responseHandler.js';
 
 const authMiddleware = (req, res, next) => {
-    const authtoken = req.cookies.auth_token;
+    const authHeader = req.headers.authorization;
+    const tokenFromHeader = authHeader?.startsWith("Bearer ") ? authHeader.split(" ")[1] : null;
+    const tokenFromCookie = req.cookies.auth_token;
+    const authtoken = tokenFromHeader || tokenFromCookie;
     if (!authtoken) {
-        return Response(res, 401, "Unauthorized");
+        return Response(res, 401, "Unauthorized : Auth_token not recived");
     }
     try {
         const decoded = jwt.verify(authtoken, process.env.JWT_SECRET);

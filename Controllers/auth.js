@@ -82,7 +82,7 @@ const verifyOtp = async (req, res) => {
         const token = generateToken(user?._id);
         res.cookie("auth_token", token, { httpOnly: true, maxAge: 365 * 24 * 60 * 60 * 1000 });
         const userObject = user.toObject(); // Ensure userObject is always a plain object
-        console.log(token, userObject)
+        console.log(`The auth_token is : ${token}, and  userObject is : ${userObject}`)
         return Response(res, 200, "OTP verified successfully", { token, user: userObject });
     } catch (error) {
         console.error("Error verifying OTP:", error);
@@ -90,6 +90,8 @@ const verifyOtp = async (req, res) => {
         return Response(res, 500, "Internal server error", null); // Pass null or an empty object for data
     }
 };
+
+// UpdateProfile
 const updateProfile = async (req, res) => {
     const { username, agreed, about, avatarUrl } = req.body;
     try {
