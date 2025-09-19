@@ -89,7 +89,8 @@ npm run preview
 Check out the live demo of ChatSphere: [ChatSphere Demo](https://chatsphere-5ie2hhfj1-ankitbhagat2062s-projects.vercel.app)
 
 ![ChatSphere Screenshot](https://via.placeholder.com/800x600.png?text=ChatSphere+Screenshot)
-![Uploading image.png…]()
+<img width="1920" height="927" alt="image" src="https://github.com/user-attachments/assets/b586f2b5-b876-4584-a1f4-f573639daac7" />
+
 
 
 ## Backend
